@@ -16,11 +16,16 @@ body {
     height: 640px;
     background-color: #fff;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
+}
+
+.row {
+    display: flex;
+    flex: 1;
 }
 
 .square {
     box-sizing: border-box;
-    flex: 1 1 40px;
+    flex: 1;
     border: #e9697c 1px solid;
 }
