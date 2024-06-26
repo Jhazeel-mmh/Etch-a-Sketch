@@ -17,6 +17,13 @@ function createSquares (amount = 16){
 
 function changeSquareBackground(e){
     let targetSquare = e.target;
+    if (targetSquare.className === "container") return;
+    targetSquare.style.backgroundColor = "#e7324d";
+}
+
+function randomizeSquareBackground(e){
+    let targetSquare = e.target;
+    if (targetSquare.className === "container") return;
     targetSquare.style.backgroundColor = "#e7324d";
 }
 
@@ -32,9 +39,16 @@ btn.addEventListener("click", () => {
     let choose;
     while (true) {
         choose = prompt("Type a number between 1 and 100 | Ingrese un número entre 1 y 100:");
+        if (!(choose)) return;
         choose = Number(choose);
         if (choose > 0 && choose <= 100) break;
     }
+
     container.textContent = "";
     createSquares(choose);
 });
+
+let rgbBtn = document.querySelector(".randomize");
+let darkerBtn = document.querySelector(".darker");
+
+
