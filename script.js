@@ -28,7 +28,15 @@ function randomColor(){
 function changeSquareBackground(e){
     let targetSquare = e.target;
     if (targetSquare.className === "container") return;
+    if (targetSquare.style.backgroundColor) return;
     targetSquare.style.backgroundColor = randomColor();
+}
+
+function addOpacity(e){
+    let targetSquare = e.target;
+    let opacity = Number(targetSquare.style.opacity);
+    if (opacity !== 1) opacity += 0.1;
+    targetSquare.style.opacity =  `${opacity} `;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -36,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 container.addEventListener("mouseover", changeSquareBackground);
+container.addEventListener("mouseover", addOpacity);
 
 let btn = document.querySelector(".btn");
 btn.addEventListener("click", () => {
