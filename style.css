@@ -2,13 +2,26 @@ html, body {
     height: 100%;
     margin: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: #e9697c;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
     min-height: 100%;
+}
+
+.btn {
+    width: 150px;
+    padding: 20px;
+    background-color: #e9697c;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    border-radius: 15px;
+    border: ridge #fff 3px;
 }
 
 .container {
