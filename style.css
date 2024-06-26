@@ -12,14 +12,15 @@ body {
 }
 
 .container {
-    width: 50vh;
-    height: 50vh;
+    width: 640px;
+    height: 640px;
     background-color: #fff;
     display: flex;
     flex-flow: row wrap;
 }
 
 .square {
-    flex: 1;
-    border: #000 1px solid;
+    box-sizing: border-box;
+    flex: 1 1 40px;
+    border: #e9697c 1px solid;
 }
