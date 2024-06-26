@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9697c;
+}
+
+body {
+    min-height: 100%;
+}
+
+.container {
+    width: 50vh;
+    height: 50vh;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.square {
+    flex: 1;
+    border: #000 1px solid;
+}
