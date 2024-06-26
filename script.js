@@ -15,18 +15,21 @@ function createSquares (amount = 16){
     }
 }
 
+function randomColor(){
+    let color = "#";
+    for (let i = 0; i < 6; i++){
+        let subcolor = Math.floor(Math.random() * 10);
+        if (subcolor > 7) subcolor = "f";
+        color += subcolor;
+    }
+    return color;
+}
+
 function changeSquareBackground(e){
     let targetSquare = e.target;
     if (targetSquare.className === "container") return;
-    targetSquare.style.backgroundColor = "#e7324d";
+    targetSquare.style.backgroundColor = randomColor();
 }
-
-function randomizeSquareBackground(e){
-    let targetSquare = e.target;
-    if (targetSquare.className === "container") return;
-    targetSquare.style.backgroundColor = "#e7324d";
-}
-
 
 document.addEventListener("DOMContentLoaded", () => {
    createSquares()
