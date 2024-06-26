@@ -14,7 +14,7 @@ body {
     min-height: 100%;
 }
 
-.btn, .randomize, .darker{
+.btn, .reset{
     width: 150px;
     padding: 20px;
     background-color: #e9697c;
@@ -41,4 +41,5 @@ body {
     box-sizing: border-box;
     flex: 1;
     border: #e9697c 1px solid;
+    opacity: 0;
 }

@@ -60,7 +60,13 @@ btn.addEventListener("click", () => {
     createSquares(choose);
 });
 
-let rgbBtn = document.querySelector(".randomize");
-let darkerBtn = document.querySelector(".darker");
+let resetBtn = document.querySelector(".reset");
+resetBtn.addEventListener("click", () => {
+    let squares = document.querySelectorAll(".square");
+    squares.forEach((square) => {
+        square.style.backgroundColor = "";
+        square.style.opacity = "0";
+    });
+});
 
 
